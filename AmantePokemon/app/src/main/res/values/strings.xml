@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Amante Pokémon</string>
+    <string name="app_name">Pokédex</string>
+    <string name="pokemon">Zeraora</string>
+    <string name="numero">#807</string>
 </resources>
