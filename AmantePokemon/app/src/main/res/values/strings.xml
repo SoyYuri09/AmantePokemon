@@ -2,4 +2,15 @@
     <string name="app_name">Pokédex</string>
     <string name="pokemon">Zeraora</string>
     <string name="numero">#807</string>
+    <string name="tipo">Eléctrico</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="habilidad">Habilidad</string>
+    <string name="valor_altura">1,5m</string>
+    <string name="valor_peso">44,5kg</string>
+    <string name="desc_habilidad">Absorbe electricidad</string>
+    <string name="description">Chispas eléctricas salen de las almohadillas
+        de sus extremidades. Dondequiera que Zeraora corre, destellan relámpagos
+        y retumban truenos.
+    </string>
 </resources>

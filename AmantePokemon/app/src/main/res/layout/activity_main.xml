@@ -12,13 +12,14 @@
         android:id="@+id/tvZeraora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="36dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/pokemon"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ivZeraora"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,22 +27,15 @@
         android:id="@+id/tvNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="296dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="sans-serif"
         android:text="@string/numero"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivZeraora"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvZeraora" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="231dp"
-        android:layout_height="412dp"
-        app:srcCompat="@drawable/ball"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="-61dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -50,10 +44,172 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="205dp" />
 
+    <ImageView
+        android:id="@+id/ivBeastBall"
+        android:layout_width="209dp"
+        android:layout_height="194dp"
+        android:layout_marginBottom="520dp"
+        android:rotationY="-19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/beastball"
+        tools:layout_editor_absoluteX="186dp" />
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="36dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_star_24" />
+
     <androidx.cardview.widget.CardView
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="386dp" />
+        android:id="@+id/cardPokemon"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="173dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="580dp">
+
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="68dp"
+                android:layout_marginEnd="176dp"
+                android:background="@drawable/tv_border"
+                android:fontFamily="sans-serif"
+                android:text="@string/tipo"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/altura"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvValorAltura"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvHabilidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/habilidad"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/tvValorAltura"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
+
+            <TextView
+                android:id="@+id/tvDescHabilidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/desc_habilidad"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/tvValorPeso"
+                app:layout_constraintTop_toBottomOf="@+id/tvHabilidad" />
+
+            <TextView
+                android:id="@+id/tvValorAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/valor_altura"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/tvAltura"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvValorPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/valor_peso"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/tvPeso"
+                app:layout_constraintTop_toBottomOf="@+id/tvValorAltura" />
+
+            <TextView
+                android:id="@+id/tvPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/peso"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvValorPeso"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAltura" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="352dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="176dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/description"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescHabilidad" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivZeraora"
+        android:layout_width="198dp"
+        android:layout_height="187dp"
+        android:elevation="20dp"
+        android:translationY="-120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cardPokemon"
+        app:srcCompat="@drawable/zeraora" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
