@@ -15,4 +15,9 @@
     </string>
     <string name="desc806">Blacephalon N.° 0806</string>
     <string name="desc808">Meltan N.° 0808</string>
+
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="forgot">¿Olvidaste tu contraseña?</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="no_cuenta">¿No tienes cuenta? Regístrate</string>
 </resources>
