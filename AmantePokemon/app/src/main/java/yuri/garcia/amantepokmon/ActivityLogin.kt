@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +26,10 @@ class ActivityLogin : AppCompatActivity() {
 
         val ivPokebola = findViewById<ImageView>(R.id.ivPokebola)
         val tvLogin = findViewById<TextView>(R.id.tvLogin)
+        val etEmail = findViewById<EditText>(R.id.etEmail)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
+        val tvForgot = findViewById<TextView>(R.id.tvForgot)
+        val tvNoCuenta = findViewById<TextView>(R.id.tvNoCuenta)
         val btnEntrar = findViewById<Button>(R.id.btnEntrar)
 
         btnEntrar.setOnClickListener {

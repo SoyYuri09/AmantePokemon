@@ -5,15 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityLogin"
-    android:background="@drawable/background_gradient">
+    tools:context=".ActivityLogin">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/ivPokebola"
@@ -24,10 +27,10 @@
 
         <TextView
             android:id="@+id/tvLogin"
-            android:layout_marginBottom="50dp"
             style="@style/titles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             android:text="@string/iniciar_sesion"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -35,9 +38,9 @@
         <EditText
             android:id="@+id/etEmail"
             style="@style/tvCampos"
-            android:layout_gravity="center"
             android:layout_width="315dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="30dp"
             android:ems="10"
             android:inputType="textEmailAddress" />
@@ -45,12 +48,12 @@
         <EditText
             android:id="@+id/etPassword"
             style="@style/tvCampos"
-            android:layout_gravity="center"
             android:layout_width="315dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPassword"
-            android:layout_marginBottom="20dp"/>
+            android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/tvForgot"
@@ -58,17 +61,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
             android:text="@string/forgot"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_marginBottom="30dp"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnEntrar"
             style="@style/tvBoton"
-            android:layout_gravity="center"
             android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="30dp"
             android:text="@string/btnEntrar" />
 
@@ -79,8 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/no_cuenta"
-            android:textAlignment="center"
-            />
+            android:textAlignment="center" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
